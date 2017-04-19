@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidFileLocCommandPackage">
+    <Groups>
+      <Group guid="guidFileLocCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_EZDOCWINTAB"/>  <!--This id is the file tab context menu-->
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidFileLocCommandPackageCmdSet" id="FileLocCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidFileLocCommandPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>File Location in Filters</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\FileLocCommand.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidFileLocCommandPackage" value="{79a66ad0-7cba-4f73-bcd6-135c48322951}" />
+
+    <GuidSymbol name="guidFileLocCommandPackageCmdSet" value="{f1a36b80-a278-40b8-bbb3-25257ddce6f4}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="FileLocCommandId" value="0x0100" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{8c8fc72b-6d80-42d3-9258-e94ff8682919}" >
+      <IDSymbol name="bmpPic1" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
